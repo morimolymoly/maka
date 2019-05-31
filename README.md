@@ -15,3 +15,6 @@ Mapping table
 Shell> fs0:
 Shell> fs0: maka.efi
 ```
+
+# References
+https://github.com/garasubo/uefi-practice
