@@ -4,6 +4,8 @@
 use core::ffi::c_void;
 use core::panic::PanicInfo;
 
+mod utils;
+
 #[repr(C)]
 pub struct EfiTableHeader {
     pub signature: u64,
@@ -48,11 +50,8 @@ pub enum EfiStatus {
 pub extern "C" fn efi_main(image: EfiHandle, st: EfiSystemTable) -> EfiStatus {
     let stdout: &mut EfiSimpleTextOutputProtocol = unsafe { &mut *(st.con_out) };
     let string = "hello world".as_bytes();
-    let mut buf = [0u16; 32];
 
-    for i in 0..string.len() {
-        buf[i] = string[i] as u16;
-    }
+    let buf = utils::convert_bytes2ucs2(string);
 
     unsafe {
         (stdout.reset)(stdout, false);
