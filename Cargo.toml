@@ -1,0 +1,12 @@
+[package]
+name = "maka"
+version = "0.1.0"
+authors = ["morimolymoly <morimolymoly@gmail.com>"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]
