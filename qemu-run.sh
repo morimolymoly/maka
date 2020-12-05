@@ -1,7 +1,7 @@
 #!/bin/sh
 
-OVMF_CODE=/Users/mizuho/uefi/OVMF_CODE.fd
-OVMF_VARS=/Users/mizuho/uefi/OVMF_VARS.fd
+OVMF_CODE=./OVMF_CODE.fd
+OVMF_VARS=./OVMF_VARS.fd
 BUILD_DIR=$(pwd)/target/x86_64-unknown-uefi/debug
 
 qemu-system-x86_64 \

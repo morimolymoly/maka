@@ -2,6 +2,7 @@
 name = "maka"
 version = "0.1.0"
 authors = ["morimolymoly <morimolymoly@gmail.com>"]
+edition = "2018"
 
 [profile.dev]
 panic = "abort"
@@ -10,3 +11,4 @@ panic = "abort"
 panic = "abort"
 
 [dependencies]
+uefi = "0.5.0"
