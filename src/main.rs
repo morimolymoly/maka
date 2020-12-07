@@ -13,7 +13,7 @@ fn efi_main(_handle: Handle, st: SystemTable<Boot>) -> Status {
 }
 
 #[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
+fn panic(info: &PanicInfo) -> ! {
     loop {}
 }
 

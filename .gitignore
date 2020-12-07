@@ -2,3 +2,4 @@
 **/*.rs.bk
 OVMF_CODE.fd
 OVMF_VARS.fd
+/mnt
